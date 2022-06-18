@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Roblox Ad pages
 // @namespace    https://github.com/smolyoshino/roblox-ad-pages
-// @version      0.1.1
+// @version      0.1.5
 // @description  this serves no purpose other than me wanting a convenient way to request multiple ads
 // @author       smolyoshino
 // @match        https://www.roblox.com/*
@@ -40,29 +40,35 @@
     observer.observe(document.body, { attributes: false, childList: true, subtree: true });
     mountBtn();
     if(window.location.href.includes("https://www.roblox.com/ads")){
-       robloxAnus.style.display = "none";
-       navMenu.style.display = "flex";
-       navMenu.style.flexDirection = "row";
-       navMenu.style.height = "46px";
-       navMenu.style.width = "100%";
+        robloxAnus.style.display = "none";
+        navMenu.style.display = "flex";
+        navMenu.style.flexDirection = "row";
+        navMenu.style.height = "46px";
+        navMenu.style.width = "100%";
+        let adStyle = createElm(`<style id="adStyle">.left-col-list {display: flex;flex-direction: row;} .simplebar-content-wrapper {overflow:unset!important;} .no-gutter-ads .rbx-left-col .rbx-scrollbar, .rbx-left-col .rbx-scrollbar{width:100%!important;}</style>`);
+        robloxbody.appendChild(adStyle);
     }
+    let topSpacer = createElm(`<div style="height:95px;width:100%;"></div>`);
     if(window.location.href == "https://www.roblox.com/ads"){
         let tipFart = createElm(`<div style="display:flex;align-items:center;justify-content:center;width:100%;height:100vh;"><h1><a href="https://www.roblox.com/ads/1">Wide ads</a>&nbsp;&nbsp;&nbsp;<a href=https://www.roblox.com/ads/2">Tall ads</a>&nbsp;&nbsp;&nbsp;<a href="https://www.roblox.com/ads/3">Square ads</a></h1></div>`);
         robloxbody.appendChild(tipFart);
     }
     if(window.location.href.match("https://www.roblox.com/ads/1")){
+        robloxbody.appendChild(topSpacer);
         for(let i=0;i<55;i++) {
             let adFart = createElm(`<iframe src="https://www.roblox.com/user-sponsorship/1" style="width: 728px; height: 108px; border:0;"></iframe>`);
             robloxbody.appendChild(adFart);
         }
     }
     if(window.location.href.match("https://www.roblox.com/ads/2")){
+        robloxbody.appendChild(topSpacer);
         for(let i=0;i<55;i++) {
             let adFart = createElm(`<iframe src="https://www.roblox.com/user-sponsorship/2" style="width: 164px; height: 619px; border:0;"></iframe>`);
             robloxbody.appendChild(adFart);
         }
     }
     if(window.location.href.match("https://www.roblox.com/ads/3")){
+        robloxbody.appendChild(topSpacer);
         for(let i=0;i<55;i++) {
             let adFart = createElm(`<iframe src="https://www.roblox.com/user-sponsorship/3" style="width: 301px; height: 271px; border:0;"></iframe>`);
             robloxbody.appendChild(adFart);
