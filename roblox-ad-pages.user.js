@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Roblox Ad pages
 // @namespace    https://github.com/smolyoshino/roblox-ad-pages
-// @version      0.1
+// @version      0.1.1
 // @description  this serves no purpose other than me wanting a convenient way to request multiple ads
 // @author       smolyoshino
 // @match        https://www.roblox.com/*
@@ -52,7 +52,7 @@
     }
     if(window.location.href.match("https://www.roblox.com/ads/1")){
         for(let i=0;i<55;i++) {
-            let adFart = createElm(`<iframe src="https://www.roblox.com/user-sponsorship/1" style="width: 728px; height: 162px; border:0;"></iframe>`);
+            let adFart = createElm(`<iframe src="https://www.roblox.com/user-sponsorship/1" style="width: 728px; height: 108px; border:0;"></iframe>`);
             robloxbody.appendChild(adFart);
         }
     }
