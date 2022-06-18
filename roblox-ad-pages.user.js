@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Roblox Ad pages
 // @namespace    https://github.com/smolyoshino/roblox-ad-pages
-// @version      0.1.5
+// @version      0.1.6
 // @description  this serves no purpose other than me wanting a convenient way to request multiple ads
 // @author       smolyoshino
 // @match        https://www.roblox.com/*
@@ -50,7 +50,7 @@
     }
     let topSpacer = createElm(`<div style="height:95px;width:100%;"></div>`);
     if(window.location.href == "https://www.roblox.com/ads"){
-        let tipFart = createElm(`<div style="display:flex;align-items:center;justify-content:center;width:100%;height:100vh;"><h1><a href="https://www.roblox.com/ads/1">Wide ads</a>&nbsp;&nbsp;&nbsp;<a href=https://www.roblox.com/ads/2">Tall ads</a>&nbsp;&nbsp;&nbsp;<a href="https://www.roblox.com/ads/3">Square ads</a></h1></div>`);
+        let tipFart = createElm(`<div style="display:flex;align-items:center;justify-content:center;width:100%;height:100vh;"><h1><a href="https://www.roblox.com/ads/1">Wide ads</a>&nbsp;&nbsp;&nbsp;<a href="https://www.roblox.com/ads/2">Tall ads</a>&nbsp;&nbsp;&nbsp;<a href="https://www.roblox.com/ads/3">Square ads</a></h1></div>`);
         robloxbody.appendChild(tipFart);
     }
     if(window.location.href.match("https://www.roblox.com/ads/1")){
